@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Labb_1</string>
+    <string name="tv_main"> Välkomen till hemsidan för stockholms fotbollsklubbar, för mer info tryck på knappen nedanför
+    </string>
+    <string name="tv_about">Till Stockholmslagen räknas framför allt AIK, Djurgårdens IF, Hammarby IF och ibland även IF Brommapojkarna, då dessa ofta har spelat i högsta serien. I lägre divisioner saknar begreppet relevans, eftersom de lägre divisionerna är geografiskt mindre och lag från Storstockholm därmed bara möter andra lag från samma område. För att Logga in med ditt favoritlag fyll i ditt namn + lag nedan.</string>
+</resources>
