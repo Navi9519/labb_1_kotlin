@@ -1,5 +1,6 @@
 package com.example.labb_1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.labb_1.databinding.ActivityAboutBinding
@@ -19,18 +20,19 @@ class LoggedInActivity : AppCompatActivity() {
         val tvTeam = binding.tvTeam
         val tvStadium = binding.tvStadium
         val tvTitle = binding.tvTitles
+        val btnBackToMain = binding.btnBackToMain
         val receivedUserArray = intent.getSerializableExtra("userArray") as? ArrayList<User>
 
         if (receivedUserArray != null) {
             val name = receivedUserArray[0].userName
             val team = receivedUserArray[0].userTeam
 
-            tvLogInMessage.text = "Hello ${name}, your team is ${team} "
+            tvLogInMessage.text = "Hej, du är inloggad som ${name.toUpperCase()}, med lag: ${team.toUpperCase()} "
 
             if (receivedUserArray[0].userTeam.equals("Hammarby", ignoreCase = true) ||
                 receivedUserArray[0].userTeam.equals("HIF", ignoreCase = true))  {
 
-                binding.root.setBackgroundResource(R.drawable.hammarby_colors)
+                view.setBackgroundResource(R.drawable.hammarby_colors)
 
              val HIF = Team("Hammarby", "Tele 2", 1)
 
@@ -42,7 +44,7 @@ class LoggedInActivity : AppCompatActivity() {
 
          } else if (receivedUserArray[0].userTeam.equals("AIK", ignoreCase = true))  {
 
-                binding.root.setBackgroundResource(R.drawable.aik_colors)
+                view.setBackgroundResource(R.drawable.aik_colors)
 
                 val AIK = Team("AIK", "National arenan", 11)
 
@@ -54,7 +56,7 @@ class LoggedInActivity : AppCompatActivity() {
             } else if (receivedUserArray[0].userTeam.equals("Djurgården", ignoreCase = true) ||
                 receivedUserArray[0].userTeam.equals("DIF", ignoreCase = true))  {
 
-                binding.root.setBackgroundResource(R.drawable.djurgarden_colors)
+               view.setBackgroundResource(R.drawable.djurgarden_colors)
 
                 val DIF = Team("Djurgården", "Tele 2", 11)
                 tvTeam.text = "Lag: ${DIF.teamName}"
@@ -64,6 +66,10 @@ class LoggedInActivity : AppCompatActivity() {
 
             }
 
+            btnBackToMain.setOnClickListener {
+                val myIntent = Intent(this, MainActivity::class.java)
+                startActivity(myIntent)
+            }
 
             }
         }

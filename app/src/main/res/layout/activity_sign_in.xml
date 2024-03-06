@@ -4,73 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/signin"
     tools:context=".SignInActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".AboutActivity">
-
-        <TextView
-            android:id="@+id/tv_sign_in"
-            android:layout_width="355dp"
-            android:layout_height="136dp"
-            android:text="@string/tv_about"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.29" />
+        tools:context=".AboutActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-98dp">
 
 
         <Button
             android:id="@+id/et_sign_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="72dp"
+            android:backgroundTint="#000"
             android:text="Logga in"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_team" />
+            app:layout_constraintTop_toBottomOf="@+id/et_user_team"
+            app:layout_constraintVertical_bias="0.127" />
 
         <EditText
             android:id="@+id/et_user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#FFFFFF"
             android:ems="10"
             android:inputType="text"
-            android:text="Name"
-            app:layout_constraintBottom_toTopOf="@+id/et_user_team"
+            android:text="Namn"
+            android:textColor="#000"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_sign_in" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.401" />
 
         <EditText
             android:id="@+id/et_user_team"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#FFFFFF"
             android:ems="10"
             android:inputType="text"
-            android:text="Name"
-            app:layout_constraintBottom_toTopOf="@+id/et_sign_in"
+            android:text="Lag"
+            android:textColor="#000"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_sign_in"
-            app:layout_constraintVertical_bias="0.642" />
+            app:layout_constraintTop_toBottomOf="@+id/et_user_name"
+            app:layout_constraintVertical_bias="0.112" />
+
+        <TextView
+            android:id="@+id/tv_login_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:text="@string/log_in_info"
+            android:textColor="#FFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/et_user_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="355dp"
-        android:layout_height="136dp"
-        android:text="@string/tv_about"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29"
-        tools:ignore="DuplicateIds" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

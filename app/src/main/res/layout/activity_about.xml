@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/friends"
+    android:elevation="20dp"
     tools:context=".AboutActivity">
 
     <TextView
@@ -11,20 +13,31 @@
         android:layout_width="355dp"
         android:layout_height="136dp"
         android:text="@string/tv_about"
+        android:gravity="center"
+        android:textColor="#FFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:elevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29" />
+        app:layout_constraintVertical_bias="0.361" />
 
     <Button
         android:id="@+id/btn_go_to_log_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to sign in"
+        android:backgroundTint="#000"
+        android:text="Gå till inlogg"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.629" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

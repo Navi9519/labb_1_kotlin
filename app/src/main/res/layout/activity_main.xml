@@ -4,31 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fotboll_sthlm"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tv_welcome"
-        android:layout_width="350dp"
-        android:layout_height="39dp"
+        android:layout_width="356dp"
+        android:layout_height="69dp"
+        android:gravity="center"
         android:text="@string/tv_main"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.346" />
+        app:layout_constraintVertical_bias="0.096" />
 
     <Button
         android:id="@+id/btn_to_aboutpage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text='Gå till "About page"'
+        android:text='Gå till "Mer info"'
+        android:backgroundTint="#000"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_welcome"
-        app:layout_constraintVertical_bias="0.216" />
+        app:layout_constraintVertical_bias="0.894" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
